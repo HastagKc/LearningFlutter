@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'drawer.dart';
+import 'nameCard.dart';
 
 class ImageWidgets extends StatefulWidget {
   const ImageWidgets({Key? key}) : super(key: key);
@@ -42,60 +43,7 @@ class _ImageWidgetsState extends State<ImageWidgets> {
         // alignment: Alignment.center,
 
         child: SingleChildScrollView(
-          child: Card(
-            elevation: 10,
-            shadowColor: Colors.green,
-            child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Image.asset(
-                  "assets/2.jpg",
-                  // width: 300,
-                  fit: BoxFit.contain,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  myText,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
-                ),
-                SizedBox(height: 20),
-                Padding(
-                  padding: EdgeInsets.all(20),
-                ),
-                Container(
-                  width: 350,
-                  child: TextField(
-                    controller: _nameController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: "Email",
-                      labelText: "Email",
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: 350,
-                  child: TextField(
-                    obscureText: true,
-                    // controller: _nameController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: "Passowrd",
-                      labelText: "Password",
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          child: NameCard(myText: myText, nameController: _nameController),
         ),
       ),
       floatingActionButton: FloatingActionButton(
