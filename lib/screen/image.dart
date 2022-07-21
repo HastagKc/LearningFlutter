@@ -33,11 +33,11 @@ class _ImageWidgetsState extends State<ImageWidgets> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: Text("AppBar"),
+        title: const Text("AppBar"),
       ),
-      drawer: DrawerWid(),
+      drawer: const DrawerWid(),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         width: double.infinity,
         // alignment: Alignment.center,
 
