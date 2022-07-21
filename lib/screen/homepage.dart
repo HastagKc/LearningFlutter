@@ -8,6 +8,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Great App"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.exit_to_app),
+          ),
+        ],
       ),
       body: Center(
         child: Container(

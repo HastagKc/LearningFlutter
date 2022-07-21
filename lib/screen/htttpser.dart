@@ -5,7 +5,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class HttpSever extends StatefulWidget {
-  const HttpSever({Key? key}) : super(key: key);
+  // const HttpSever({Key? key}) : super(key: key);
+  static const String routeName = "/home";
 
   @override
   State<HttpSever> createState() => _HttpSeverState();
@@ -44,6 +45,14 @@ class _HttpSeverState extends State<HttpSever> {
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
         title: const Text("AppBar"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.exit_to_app),
+          ),
+        ],
       ),
       drawer: const DrawerWid(),
       body: data != null

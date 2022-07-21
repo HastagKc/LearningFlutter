@@ -1,6 +1,7 @@
 import 'package:essientials_app/screen/homepage.dart';
 import 'package:essientials_app/screen/htttpser.dart';
 import 'package:essientials_app/screen/image.dart';
+import 'package:essientials_app/screen/login_page.dart';
 import 'package:essientials_app/screen/rowCol.dart';
 import 'package:flutter/material.dart';
 
@@ -22,11 +23,16 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       // home: RowCol(),
       // home: ImageWidgets(),
-      home: HttpSever(),
+      // home: HttpSever(),
+      home: LoginPage(),
 
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
+      routes: {
+        LoginPage.routeName: (context) => LoginPage(),
+        HttpSever.routeName: (context) => HttpSever(),
+      },
     );
   }
 }
